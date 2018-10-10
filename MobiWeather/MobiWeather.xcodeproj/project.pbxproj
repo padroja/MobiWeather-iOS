@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2CBD42E2804CC45640DD5EED /* Pods_MobiWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7991C3C7888D01D141A518F /* Pods_MobiWeather.framework */; };
+		7F976E29216DD60F003D2F6E /* MobiAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E28216DD60F003D2F6E /* MobiAPIProvider.swift */; };
+		7F976E2C216DD787003D2F6E /* MobiConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E2B216DD787003D2F6E /* MobiConsts.swift */; };
+		7F976E2F216DD7F6003D2F6E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E2E216DD7F6003D2F6E /* String.swift */; };
+		7F976E31216DD8E7003D2F6E /* MobiNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E30216DD8E7003D2F6E /* MobiNetworkService.swift */; };
+		7F976E34216E0246003D2F6E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E33216E0246003D2F6E /* Weather.swift */; };
 		7FD12541216DC51A000C96B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD12540216DC51A000C96B9 /* AppDelegate.swift */; };
 		7FD12546216DC51A000C96B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD12544216DC51A000C96B9 /* Main.storyboard */; };
 		7FD12548216DC51B000C96B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD12547216DC51B000C96B9 /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 /* Begin PBXFileReference section */
 		1C03D5C45E1EE71AA4440EDA /* Pods_MobiWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		508EE9555045D76FEE3353A4 /* Pods-MobiWeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeatherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeatherTests/Pods-MobiWeatherTests.release.xcconfig"; sourceTree = "<group>"; };
+		7F976E28216DD60F003D2F6E /* MobiAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiAPIProvider.swift; sourceTree = "<group>"; };
+		7F976E2B216DD787003D2F6E /* MobiConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiConsts.swift; sourceTree = "<group>"; };
+		7F976E2E216DD7F6003D2F6E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7F976E30216DD8E7003D2F6E /* MobiNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiNetworkService.swift; sourceTree = "<group>"; };
+		7F976E33216E0246003D2F6E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		7FD1253D216DC51A000C96B9 /* MobiWeather-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MobiWeather-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD12540216DC51A000C96B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FD12545216DC51A000C96B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +80,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F976E26216DD5E0003D2F6E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E27216DD5EB003D2F6E /* Network */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		7F976E27216DD5EB003D2F6E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E28216DD60F003D2F6E /* MobiAPIProvider.swift */,
+				7F976E30216DD8E7003D2F6E /* MobiNetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7F976E2A216DD76F003D2F6E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E2B216DD787003D2F6E /* MobiConsts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		7F976E2D216DD7E8003D2F6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E2E216DD7F6003D2F6E /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7F976E32216DF913003D2F6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E33216E0246003D2F6E /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7FD12534216DC51A000C96B9 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +144,11 @@
 		7FD1253F216DC51A000C96B9 /* MobiWeather */ = {
 			isa = PBXGroup;
 			children = (
+				7F976E32216DF913003D2F6E /* Model */,
 				7FD12569216DC87C000C96B9 /* Configuration */,
+				7F976E2A216DD76F003D2F6E /* Constants */,
+				7F976E2D216DD7E8003D2F6E /* Extensions */,
+				7F976E26216DD5E0003D2F6E /* Manager */,
 				7FD12562216DC712000C96B9 /* Storyboards */,
 				7FD12561216DC708000C96B9 /* Resources */,
 				7FD12560216DC6F7000C96B9 /* SupportingFiles */,
@@ -342,7 +397,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F976E34216E0246003D2F6E /* Weather.swift in Sources */,
+				7F976E2F216DD7F6003D2F6E /* String.swift in Sources */,
+				7F976E29216DD60F003D2F6E /* MobiAPIProvider.swift in Sources */,
 				7FD1256B216DC8B8000C96B9 /* Configuration.swift in Sources */,
+				7F976E31216DD8E7003D2F6E /* MobiNetworkService.swift in Sources */,
+				7F976E2C216DD787003D2F6E /* MobiConsts.swift in Sources */,
 				7FD1256D216DC8D7000C96B9 /* Environment.swift in Sources */,
 				7FD12541216DC51A000C96B9 /* AppDelegate.swift in Sources */,
 			);
