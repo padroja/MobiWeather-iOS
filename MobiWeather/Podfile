@@ -1,0 +1,15 @@
+platform :ios, '10.0'
+
+target 'MobiWeather' do
+  use_frameworks!
+    pod 'SwiftLocation'
+    pod 'Moya'
+    pod 'Moya-ObjectMapper'
+    pod 'SVProgressHUD'
+
+  target 'MobiWeatherTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
