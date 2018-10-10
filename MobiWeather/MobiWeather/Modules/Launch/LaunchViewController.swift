@@ -15,10 +15,6 @@ class LaunchViewController: MobiBaseViewController {
     
     private var currentAnimatedImageIndex = 0
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
@@ -42,7 +38,14 @@ class LaunchViewController: MobiBaseViewController {
             self.currentAnimatedImageIndex += 1
             if self.currentAnimatedImageIndex < weatherImages.count {
                 self.startWeatherAnimation()
+            } else {
+                self.navigateToHomeController()
             }
         }
+    }
+    
+    private func navigateToHomeController() {
+        let controller = HomeViewController.instantiateFrom(appStoryboard: .Main)
+        push(controller)
     }
 }

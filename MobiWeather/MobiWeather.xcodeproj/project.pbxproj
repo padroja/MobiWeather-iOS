@@ -22,6 +22,9 @@
 		7FD12556216DC51B000C96B9 /* MobiWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD12555216DC51B000C96B9 /* MobiWeatherTests.swift */; };
 		7FD1256B216DC8B8000C96B9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1256A216DC8B8000C96B9 /* Configuration.swift */; };
 		7FD1256D216DC8D7000C96B9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1256C216DC8D7000C96B9 /* Environment.swift */; };
+		D53FBBE0216E4532007CEC3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBDF216E4532007CEC3F /* HomeViewController.swift */; };
+		D53FBBE2216E6152007CEC3F /* MobiBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBE1216E6152007CEC3F /* MobiBoard.swift */; };
+		D53FBBE4216E61B1007CEC3F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBE3216E61B1007CEC3F /* UIViewController.swift */; };
 		FBCC3D29DE933C56F57A24BD /* Pods_MobiWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C03D5C45E1EE71AA4440EDA /* Pods_MobiWeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,9 @@
 		8A5194FB666892032BEDB1A2 /* Pods-MobiWeatherTests.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeatherTests.stage.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeatherTests/Pods-MobiWeatherTests.stage.xcconfig"; sourceTree = "<group>"; };
 		A1B2F2D991C10FB118AB8C30 /* Pods-MobiWeatherTests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeatherTests.dev.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeatherTests/Pods-MobiWeatherTests.dev.xcconfig"; sourceTree = "<group>"; };
 		B560CF9048AC02C555D55E2F /* Pods-MobiWeather.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeather.dev.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeather/Pods-MobiWeather.dev.xcconfig"; sourceTree = "<group>"; };
+		D53FBBDF216E4532007CEC3F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D53FBBE1216E6152007CEC3F /* MobiBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiBoard.swift; sourceTree = "<group>"; };
+		D53FBBE3216E61B1007CEC3F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D7991C3C7888D01D141A518F /* Pods_MobiWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8CB1F2D9B557A25557882E /* Pods-MobiWeather.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeather.stage.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeather/Pods-MobiWeather.stage.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				7F976E2B216DD787003D2F6E /* MobiConsts.swift */,
+				D53FBBE1216E6152007CEC3F /* MobiBoard.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				7F976E2E216DD7F6003D2F6E /* String.swift */,
+				D53FBBE3216E61B1007CEC3F /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				7F976E37216E0A5D003D2F6E /* Launch */,
+				D53FBBDE216E451D007CEC3F /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -183,9 +192,8 @@
 				7F976E32216DF913003D2F6E /* Models */,
 				7FD12569216DC87C000C96B9 /* Configuration */,
 				7F976E2A216DD76F003D2F6E /* Constants */,
-				7F976E2D216DD7E8003D2F6E /* Extensions */,
+				D53FBBE5216E642D007CEC3F /* Utils */,
 				7F976E3A216E0ABA003D2F6E /* Customs */,
-				7F976E26216DD5E0003D2F6E /* Managers */,
 				7F976E35216E0A39003D2F6E /* Modules */,
 				7FD12562216DC712000C96B9 /* Storyboards */,
 				7FD12561216DC708000C96B9 /* Resources */,
@@ -249,6 +257,23 @@
 				8A5194FB666892032BEDB1A2 /* Pods-MobiWeatherTests.stage.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D53FBBDE216E451D007CEC3F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D53FBBDF216E4532007CEC3F /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D53FBBE5216E642D007CEC3F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E2D216DD7E8003D2F6E /* Extensions */,
+				7F976E26216DD5E0003D2F6E /* Managers */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D8871F1C80D1F1A602A6B4A5 /* Frameworks */ = {
@@ -444,7 +469,10 @@
 				7FD1256B216DC8B8000C96B9 /* Configuration.swift in Sources */,
 				7F976E31216DD8E7003D2F6E /* MobiNetworkService.swift in Sources */,
 				7F976E2C216DD787003D2F6E /* MobiConsts.swift in Sources */,
+				D53FBBE4216E61B1007CEC3F /* UIViewController.swift in Sources */,
+				D53FBBE0216E4532007CEC3F /* HomeViewController.swift in Sources */,
 				7FD1256D216DC8D7000C96B9 /* Environment.swift in Sources */,
+				D53FBBE2216E6152007CEC3F /* MobiBoard.swift in Sources */,
 				7F976E39216E0A71003D2F6E /* LaunchViewController.swift in Sources */,
 				7FD12541216DC51A000C96B9 /* AppDelegate.swift in Sources */,
 			);
@@ -554,8 +582,9 @@
 			baseConfigurationReference = B560CF9048AC02C555D55E2F /* Pods-MobiWeather.dev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9MXB9EHJSS;
 				INFOPLIST_FILE = "$(SRCROOT)/MobiWeather/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -657,8 +686,9 @@
 			baseConfigurationReference = FC8CB1F2D9B557A25557882E /* Pods-MobiWeather.stage.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9MXB9EHJSS;
 				INFOPLIST_FILE = "$(SRCROOT)/MobiWeather/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -751,6 +781,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
@@ -760,8 +791,9 @@
 			baseConfigurationReference = 801581CE5B412630028944CF /* Pods-MobiWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9MXB9EHJSS;
 				INFOPLIST_FILE = "$(SRCROOT)/MobiWeather/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
