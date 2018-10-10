@@ -13,6 +13,8 @@
 		7F976E2F216DD7F6003D2F6E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E2E216DD7F6003D2F6E /* String.swift */; };
 		7F976E31216DD8E7003D2F6E /* MobiNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E30216DD8E7003D2F6E /* MobiNetworkService.swift */; };
 		7F976E34216E0246003D2F6E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E33216E0246003D2F6E /* Weather.swift */; };
+		7F976E39216E0A71003D2F6E /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E38216E0A71003D2F6E /* LaunchViewController.swift */; };
+		7F976E3D216E0AE1003D2F6E /* MobiBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E3C216E0AE1003D2F6E /* MobiBaseViewController.swift */; };
 		7FD12541216DC51A000C96B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD12540216DC51A000C96B9 /* AppDelegate.swift */; };
 		7FD12546216DC51A000C96B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD12544216DC51A000C96B9 /* Main.storyboard */; };
 		7FD12548216DC51B000C96B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD12547216DC51B000C96B9 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		7F976E2E216DD7F6003D2F6E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7F976E30216DD8E7003D2F6E /* MobiNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiNetworkService.swift; sourceTree = "<group>"; };
 		7F976E33216E0246003D2F6E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		7F976E38216E0A71003D2F6E /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		7F976E3C216E0AE1003D2F6E /* MobiBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiBaseViewController.swift; sourceTree = "<group>"; };
 		7FD1253D216DC51A000C96B9 /* MobiWeather-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MobiWeather-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD12540216DC51A000C96B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FD12545216DC51A000C96B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,12 +84,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F976E26216DD5E0003D2F6E /* Manager */ = {
+		7F976E26216DD5E0003D2F6E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				7F976E27216DD5EB003D2F6E /* Network */,
 			);
-			path = Manager;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		7F976E27216DD5EB003D2F6E /* Network */ = {
@@ -113,12 +117,44 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7F976E32216DF913003D2F6E /* Model */ = {
+		7F976E32216DF913003D2F6E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7F976E33216E0246003D2F6E /* Weather.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7F976E35216E0A39003D2F6E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E37216E0A5D003D2F6E /* Launch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7F976E37216E0A5D003D2F6E /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E38216E0A71003D2F6E /* LaunchViewController.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		7F976E3A216E0ABA003D2F6E /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E3B216E0ACF003D2F6E /* Controllers */,
+			);
+			path = Customs;
+			sourceTree = "<group>";
+		};
+		7F976E3B216E0ACF003D2F6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E3C216E0AE1003D2F6E /* MobiBaseViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7FD12534216DC51A000C96B9 = {
@@ -144,11 +180,13 @@
 		7FD1253F216DC51A000C96B9 /* MobiWeather */ = {
 			isa = PBXGroup;
 			children = (
-				7F976E32216DF913003D2F6E /* Model */,
+				7F976E32216DF913003D2F6E /* Models */,
 				7FD12569216DC87C000C96B9 /* Configuration */,
 				7F976E2A216DD76F003D2F6E /* Constants */,
 				7F976E2D216DD7E8003D2F6E /* Extensions */,
-				7F976E26216DD5E0003D2F6E /* Manager */,
+				7F976E3A216E0ABA003D2F6E /* Customs */,
+				7F976E26216DD5E0003D2F6E /* Managers */,
+				7F976E35216E0A39003D2F6E /* Modules */,
 				7FD12562216DC712000C96B9 /* Storyboards */,
 				7FD12561216DC708000C96B9 /* Resources */,
 				7FD12560216DC6F7000C96B9 /* SupportingFiles */,
@@ -348,6 +386,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobiWeather/Pods-MobiWeather-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -359,6 +398,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -397,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F976E3D216E0AE1003D2F6E /* MobiBaseViewController.swift in Sources */,
 				7F976E34216E0246003D2F6E /* Weather.swift in Sources */,
 				7F976E2F216DD7F6003D2F6E /* String.swift in Sources */,
 				7F976E29216DD60F003D2F6E /* MobiAPIProvider.swift in Sources */,
@@ -404,6 +445,7 @@
 				7F976E31216DD8E7003D2F6E /* MobiNetworkService.swift in Sources */,
 				7F976E2C216DD787003D2F6E /* MobiConsts.swift in Sources */,
 				7FD1256D216DC8D7000C96B9 /* Environment.swift in Sources */,
+				7F976E39216E0A71003D2F6E /* LaunchViewController.swift in Sources */,
 				7FD12541216DC51A000C96B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

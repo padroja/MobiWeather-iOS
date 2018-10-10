@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
+  - Hero (1.3.1)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya-ObjectMapper (2.7):
@@ -18,6 +19,7 @@ PODS:
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - Hero
   - Moya
   - Moya-ObjectMapper
   - SVProgressHUD
@@ -26,6 +28,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Hero
     - Moya
     - Moya-ObjectMapper
     - ObjectMapper
@@ -36,6 +39,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Hero: 1c3c625ba05856f305d29f5c270f8766c5ff2df7
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Moya-ObjectMapper: 441caa307b527331fde59e2577adc632a16f1255
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
@@ -44,6 +48,6 @@ SPEC CHECKSUMS:
   SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 9701cb66ae0b4d70e38a0a4b66fc8f2da1bc7466
+PODFILE CHECKSUM: 31d1322c9ff4469868e1caca045a4c552d61bd4d
 
 COCOAPODS: 1.5.3
