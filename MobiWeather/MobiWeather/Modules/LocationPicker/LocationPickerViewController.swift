@@ -25,6 +25,7 @@ class LocationPickerViewController: MobiBaseViewController {
     
     var places = [LocalLocation]()
     var delegate: LocationPickerDelegate?
+    let impact = UIImpactFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +38,13 @@ class LocationPickerViewController: MobiBaseViewController {
     
     private func setupMapView() {
         let touchGesture = UILongPressGestureRecognizer(target: self, action: #selector(touchedOnMap(gestureRecognizer:)))
-        touchGesture.minimumPressDuration = 1.0
+        touchGesture.minimumPressDuration = 0.5
         mapView.addGestureRecognizer(touchGesture)
     }
     
     @objc func touchedOnMap(gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
+            impact.impactOccurred()
             let touchPoint = gestureRecognizer.location(in: mapView)
             let coordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
             getDetailsFor(coordinates: coordinates)
