@@ -28,15 +28,22 @@ class HomeWeatherLocationTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(location: LocalLocation) {
+    func configureCell(location: LocalLocation, index: Int) {
         if localLocation != nil {
             if localLocation.location != location.location {
                 forceRefreshCell = true
             }
         }
         localLocation = location
+        setupTransistionData(index: index)
         setInitialData()
         updateCellUI()
+    }
+    
+    private func setupTransistionData(index: Int) {
+        cityNameLabel.hero.id = "h_city_\(index)"
+        weatherTypeLabel.hero.id = "h_weatherType_\(index)"
+        temperatureLabel.hero.id = "h_temperature_\(index)"
     }
     
     private func setInitialData() {

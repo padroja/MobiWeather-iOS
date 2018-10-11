@@ -18,6 +18,7 @@ class LaunchViewController: MobiBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        configureInitials()
     }
     
     private func configureView() {
@@ -47,5 +48,9 @@ class LaunchViewController: MobiBaseViewController {
     private func navigateToHomeController() {
         let controller = HomeViewController.instantiateFrom(appStoryboard: .Main)
         push(controller)
+    }
+    
+    private func configureInitials() {
+        UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class HomeViewController: MobiBaseViewController {
 
@@ -38,10 +39,11 @@ class HomeViewController: MobiBaseViewController {
         locationTableView.reloadData()
     }
     
-    private func navigateToCityDetail(details: Weather) {
+    private func navigateToCityDetail(details: Weather, selectedIndex: Int) {
         let cityDetailController = CityDetailViewController.instantiateFrom(appStoryboard: .Main)
         cityDetailController.weatherDetails = details
-        present(cityDetailController)
+        cityDetailController.selectedIndex = selectedIndex
+        push(cityDetailController)
     }
 }
 
@@ -60,7 +62,7 @@ extension HomeViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let location = locationPlaces![indexPath.row]
-        cell.configureCell(location: location)
+        cell.configureCell(location: location, index: indexPath.row)
         
         return cell
     }
@@ -74,7 +76,7 @@ extension HomeViewController: UITableViewDelegate {
         }
         
         if let weatherDetails = cell.weatherModel {
-            navigateToCityDetail(details: weatherDetails)
+            navigateToCityDetail(details: weatherDetails, selectedIndex: indexPath.row)
         }
     }
     
@@ -86,7 +88,7 @@ extension HomeViewController: UITableViewDelegate {
         if editingStyle == .delete {
             LocalStorageManager.remove(location: locationPlaces![indexPath.row])
             locationPlaces?.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            updateLocationTable()
         }
     }
 }

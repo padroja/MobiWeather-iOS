@@ -44,7 +44,6 @@ class LocationPickerViewController: MobiBaseViewController {
     
     @objc func touchedOnMap(gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
-            impact.impactOccurred()
             let touchPoint = gestureRecognizer.location(in: mapView)
             let coordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
             getDetailsFor(coordinates: coordinates)
@@ -73,6 +72,7 @@ class LocationPickerViewController: MobiBaseViewController {
     }
     
     private func addAnnotationAtPoint(coordinate: CLLocationCoordinate2D, placemark: CLPlacemark?) {
+        impact.impactOccurred()
         var annotationTitle = ""
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
