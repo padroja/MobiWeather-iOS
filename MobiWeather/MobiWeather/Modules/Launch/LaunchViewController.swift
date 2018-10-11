@@ -25,11 +25,11 @@ class LaunchViewController: MobiBaseViewController {
     }
     
     private func startWeatherAnimation() {
-        var weatherImages = [#imageLiteral(resourceName: "img_sunny"),#imageLiteral(resourceName: "img_cloud_day"),#imageLiteral(resourceName: "img_clear_night"),#imageLiteral(resourceName: "img_cloudy"),#imageLiteral(resourceName: "img_rain"),#imageLiteral(resourceName: "img_cloudy_night")]
+        var weatherImages = [#imageLiteral(resourceName: "img_sunny"),#imageLiteral(resourceName: "img_clear_night"),#imageLiteral(resourceName: "img_rain"),#imageLiteral(resourceName: "img_cloudy_night")]
         let image = weatherImages[(currentAnimatedImageIndex % weatherImages.count)]
         
         UIView.transition(with: weatherImageView,
-                          duration: 0.8,
+                          duration: 0.7,
                           options: [.transitionCrossDissolve,
                                     .curveEaseOut],
                           animations: {

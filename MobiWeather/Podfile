@@ -3,11 +3,11 @@ inhibit_all_warnings!
 
 target 'MobiWeather' do
   use_frameworks!
-    pod 'SwiftLocation'
     pod 'Moya'
     pod 'Moya-ObjectMapper'
     pod 'SVProgressHUD'
     pod 'Hero'
+    pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
 
   target 'MobiWeatherTests' do
     inherit! :search_paths

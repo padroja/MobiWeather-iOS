@@ -15,6 +15,16 @@
 		7F976E34216E0246003D2F6E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E33216E0246003D2F6E /* Weather.swift */; };
 		7F976E39216E0A71003D2F6E /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E38216E0A71003D2F6E /* LaunchViewController.swift */; };
 		7F976E3D216E0AE1003D2F6E /* MobiBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E3C216E0AE1003D2F6E /* MobiBaseViewController.swift */; };
+		7F976E3F216EFD67003D2F6E /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F976E3E216EFD67003D2F6E /* LocationPicker.storyboard */; };
+		7F976E42216EFF4D003D2F6E /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E41216EFF4D003D2F6E /* LocationPickerViewController.swift */; };
+		7F976E44216F1040003D2F6E /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E43216F1040003D2F6E /* Annotation.swift */; };
+		7F976E46216F2C3F003D2F6E /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E45216F2C3F003D2F6E /* CLLocationCoordinate2D.swift */; };
+		7F976E49216F2E88003D2F6E /* HomeWeatherLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E48216F2E88003D2F6E /* HomeWeatherLocationTableViewCell.swift */; };
+		7F976E4B216F4D4F003D2F6E /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E4A216F4D4F003D2F6E /* Double.swift */; };
+		7F976E4E216F66F6003D2F6E /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E4D216F66F6003D2F6E /* CityDetailViewController.swift */; };
+		7F976E50216F6E5B003D2F6E /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E4F216F6E5B003D2F6E /* LocalStorageManager.swift */; };
+		7F976E52216F6FE6003D2F6E /* LocalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E51216F6FE6003D2F6E /* LocalLocation.swift */; };
+		7F976E54216F73E1003D2F6E /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E53216F73E1003D2F6E /* Dictionary.swift */; };
 		7FD12541216DC51A000C96B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD12540216DC51A000C96B9 /* AppDelegate.swift */; };
 		7FD12546216DC51A000C96B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD12544216DC51A000C96B9 /* Main.storyboard */; };
 		7FD12548216DC51B000C96B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD12547216DC51B000C96B9 /* Assets.xcassets */; };
@@ -48,6 +58,16 @@
 		7F976E33216E0246003D2F6E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		7F976E38216E0A71003D2F6E /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		7F976E3C216E0AE1003D2F6E /* MobiBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiBaseViewController.swift; sourceTree = "<group>"; };
+		7F976E3E216EFD67003D2F6E /* LocationPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationPicker.storyboard; sourceTree = "<group>"; };
+		7F976E41216EFF4D003D2F6E /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		7F976E43216F1040003D2F6E /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		7F976E45216F2C3F003D2F6E /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		7F976E48216F2E88003D2F6E /* HomeWeatherLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWeatherLocationTableViewCell.swift; sourceTree = "<group>"; };
+		7F976E4A216F4D4F003D2F6E /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		7F976E4D216F66F6003D2F6E /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
+		7F976E4F216F6E5B003D2F6E /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
+		7F976E51216F6FE6003D2F6E /* LocalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLocation.swift; sourceTree = "<group>"; };
+		7F976E53216F73E1003D2F6E /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		7FD1253D216DC51A000C96B9 /* MobiWeather-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MobiWeather-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD12540216DC51A000C96B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FD12545216DC51A000C96B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				7F976E27216DD5EB003D2F6E /* Network */,
+				7F976E4F216F6E5B003D2F6E /* LocalStorageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -121,6 +142,9 @@
 			children = (
 				7F976E2E216DD7F6003D2F6E /* String.swift */,
 				D53FBBE3216E61B1007CEC3F /* UIViewController.swift */,
+				7F976E45216F2C3F003D2F6E /* CLLocationCoordinate2D.swift */,
+				7F976E4A216F4D4F003D2F6E /* Double.swift */,
+				7F976E53216F73E1003D2F6E /* Dictionary.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -129,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				7F976E33216E0246003D2F6E /* Weather.swift */,
+				7F976E43216F1040003D2F6E /* Annotation.swift */,
+				7F976E51216F6FE6003D2F6E /* LocalLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +164,8 @@
 			children = (
 				7F976E37216E0A5D003D2F6E /* Launch */,
 				D53FBBDE216E451D007CEC3F /* Home */,
+				7F976E4C216F66D3003D2F6E /* CityDetail */,
+				7F976E40216EFF34003D2F6E /* LocationPicker */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -166,6 +194,30 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		7F976E40216EFF34003D2F6E /* LocationPicker */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E41216EFF4D003D2F6E /* LocationPickerViewController.swift */,
+			);
+			path = LocationPicker;
+			sourceTree = "<group>";
+		};
+		7F976E47216F2E60003D2F6E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E48216F2E88003D2F6E /* HomeWeatherLocationTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7F976E4C216F66D3003D2F6E /* CityDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7F976E4D216F66F6003D2F6E /* CityDetailViewController.swift */,
+			);
+			path = CityDetail;
+			sourceTree = "<group>";
+		};
 		7FD12534216DC51A000C96B9 = {
 			isa = PBXGroup;
 			children = (
@@ -189,9 +241,9 @@
 		7FD1253F216DC51A000C96B9 /* MobiWeather */ = {
 			isa = PBXGroup;
 			children = (
-				7F976E32216DF913003D2F6E /* Models */,
 				7FD12569216DC87C000C96B9 /* Configuration */,
 				7F976E2A216DD76F003D2F6E /* Constants */,
+				7F976E32216DF913003D2F6E /* Models */,
 				D53FBBE5216E642D007CEC3F /* Utils */,
 				7F976E3A216E0ABA003D2F6E /* Customs */,
 				7F976E35216E0A39003D2F6E /* Modules */,
@@ -231,8 +283,9 @@
 		7FD12562216DC712000C96B9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				7FD12544216DC51A000C96B9 /* Main.storyboard */,
 				7FD12549216DC51B000C96B9 /* LaunchScreen.storyboard */,
+				7FD12544216DC51A000C96B9 /* Main.storyboard */,
+				7F976E3E216EFD67003D2F6E /* LocationPicker.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -262,6 +315,7 @@
 		D53FBBDE216E451D007CEC3F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7F976E47216F2E60003D2F6E /* Cells */,
 				D53FBBDF216E4532007CEC3F /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -372,6 +426,7 @@
 				7FD1254B216DC51B000C96B9 /* LaunchScreen.storyboard in Resources */,
 				7FD12548216DC51B000C96B9 /* Assets.xcassets in Resources */,
 				7FD12546216DC51A000C96B9 /* Main.storyboard in Resources */,
+				7F976E3F216EFD67003D2F6E /* LocationPicker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,8 +472,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -429,8 +483,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -463,17 +516,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F976E3D216E0AE1003D2F6E /* MobiBaseViewController.swift in Sources */,
+				7F976E52216F6FE6003D2F6E /* LocalLocation.swift in Sources */,
+				7F976E44216F1040003D2F6E /* Annotation.swift in Sources */,
+				7F976E42216EFF4D003D2F6E /* LocationPickerViewController.swift in Sources */,
 				7F976E34216E0246003D2F6E /* Weather.swift in Sources */,
 				7F976E2F216DD7F6003D2F6E /* String.swift in Sources */,
 				7F976E29216DD60F003D2F6E /* MobiAPIProvider.swift in Sources */,
 				7FD1256B216DC8B8000C96B9 /* Configuration.swift in Sources */,
+				7F976E50216F6E5B003D2F6E /* LocalStorageManager.swift in Sources */,
 				7F976E31216DD8E7003D2F6E /* MobiNetworkService.swift in Sources */,
 				7F976E2C216DD787003D2F6E /* MobiConsts.swift in Sources */,
+				7F976E49216F2E88003D2F6E /* HomeWeatherLocationTableViewCell.swift in Sources */,
 				D53FBBE4216E61B1007CEC3F /* UIViewController.swift in Sources */,
 				D53FBBE0216E4532007CEC3F /* HomeViewController.swift in Sources */,
 				7FD1256D216DC8D7000C96B9 /* Environment.swift in Sources */,
+				7F976E54216F73E1003D2F6E /* Dictionary.swift in Sources */,
 				D53FBBE2216E6152007CEC3F /* MobiBoard.swift in Sources */,
+				7F976E46216F2C3F003D2F6E /* CLLocationCoordinate2D.swift in Sources */,
 				7F976E39216E0A71003D2F6E /* LaunchViewController.swift in Sources */,
+				7F976E4E216F66F6003D2F6E /* CityDetailViewController.swift in Sources */,
+				7F976E4B216F4D4F003D2F6E /* Double.swift in Sources */,
 				7FD12541216DC51A000C96B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,4 +13,9 @@ extension String {
     var toUrl: URL {
         return URL(string: self)!
     }
+    
+    var getCoordinates: (lat: String, lon: String) {
+        let coordinates = self.components(separatedBy: ",")
+        return (lat: coordinates.first!, lon: coordinates.last!)
+    }
 }

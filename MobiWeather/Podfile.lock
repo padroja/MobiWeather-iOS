@@ -14,16 +14,14 @@ PODS:
   - ObjectMapper (3.3.0)
   - Result (3.2.4)
   - SVProgressHUD (2.2.5)
-  - SwiftLocation (3.2.3):
-    - SwiftyJSON (~> 4.0.0-alpha.1)
-  - SwiftyJSON (4.0.0)
+  - SwiftyUserDefaults (4.0.0-alpha.1)
 
 DEPENDENCIES:
   - Hero
   - Moya
   - Moya-ObjectMapper
   - SVProgressHUD
-  - SwiftLocation
+  - SwiftyUserDefaults (= 4.0.0-alpha.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -34,8 +32,7 @@ SPEC REPOS:
     - ObjectMapper
     - Result
     - SVProgressHUD
-    - SwiftLocation
-    - SwiftyJSON
+    - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -45,9 +42,8 @@ SPEC CHECKSUMS:
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
 
-PODFILE CHECKSUM: 31d1322c9ff4469868e1caca045a4c552d61bd4d
+PODFILE CHECKSUM: e521dedbe6ac78ede73187f5199329bb4cd2512a
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

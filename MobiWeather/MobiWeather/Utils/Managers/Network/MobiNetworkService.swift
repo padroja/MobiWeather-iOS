@@ -19,7 +19,7 @@ final class MobiNetworkService {
     
     var weatherApiProvider = MoyaProvider<MobiAPIProvider>(plugins: [NetworkLoggerPlugin(verbose: MobiConsts.currentConfiguration == .dev ? true : false)])
     
-    func requestObject<T: Mappable, TT:TargetType, P: MoyaProvider<TT>>(_ provider:P,
+    func requestObject<T: Mappable, TT:TargetType, P: MoyaProvider<TT>>(provider:P,
                                                                      type:TT,
                                                                      success: @escaping ((T) -> Void),
                                                                      failure: @escaping ((Error) -> Void)) {
