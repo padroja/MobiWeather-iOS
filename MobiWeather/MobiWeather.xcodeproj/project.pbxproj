@@ -720,7 +720,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiWeather.app/MobiWeather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiWeather-Dev.app/MobiWeather-Dev";
 			};
 			name = Dev;
 		};
@@ -824,7 +824,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiWeather.app/MobiWeather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiWeather-Dev.app/MobiWeather-Dev";
 			};
 			name = Stage;
 		};
@@ -929,7 +929,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiWeather.app/MobiWeather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiWeather-Dev.app/MobiWeather-Dev";
 			};
 			name = Release;
 		};
