@@ -25,6 +25,9 @@ class CityDetailViewController: MobiBaseViewController {
     @IBOutlet weak var sunsetLabel: UILabel!
     @IBOutlet weak var pressureLabel: UILabel!
     
+    @IBOutlet weak var forecastCollectionView: UICollectionView!
+    
+    
     @IBAction func closeAction(_ sender: UIButton) {
         pop()
     }
@@ -53,6 +56,7 @@ class CityDetailViewController: MobiBaseViewController {
     }
     
     private func configureView() {
+        forecastCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
         setUI()
     }
     
@@ -103,5 +107,43 @@ extension CityDetailViewController {
         let maxTemp = (forecastList.compactMap { $0.main?.tempMax }.max() ?? 273.15).getTemperatureString()
         let minTemp = (forecastList.compactMap { $0.main?.tempMin }.min() ?? 273.15).getTemperatureString()
         minMaxTempLabel.text = "\(minTemp)/\(maxTemp)"
+        forecastCollectionView.dataSource = self
+        forecastCollectionView.reloadData()
     }
 }
+
+extension CityDetailViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return weatherForecastDetails?.list?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ForecastListCollectionViewCell", for: indexPath) as? ForecastListCollectionViewCell else { return UICollectionViewCell() }
+        
+        let forecastData = weatherForecastDetails!.list![indexPath.row]
+        cell.configureCell(weather: forecastData)
+        
+        return cell
+    }
+}
+
+extension CityDetailViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 120)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+

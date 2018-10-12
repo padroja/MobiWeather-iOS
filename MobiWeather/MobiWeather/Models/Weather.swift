@@ -18,7 +18,7 @@ class Weather: Mappable {
     var visibility: Double?
     var wind: Wind?
     var clouds: Clouds?
-    var dt: Int?
+    var dt: Double?
     var sys: WeatherSys?
     var id: Int?
     var name: String?

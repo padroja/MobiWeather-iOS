@@ -39,6 +39,8 @@
 		D53FBBE0216E4532007CEC3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBDF216E4532007CEC3F /* HomeViewController.swift */; };
 		D53FBBE2216E6152007CEC3F /* MobiBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBE1216E6152007CEC3F /* MobiBoard.swift */; };
 		D53FBBE4216E61B1007CEC3F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBE3216E61B1007CEC3F /* UIViewController.swift */; };
+		D5999EF32170F86F00B7BDD4 /* ForecastListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5999EF22170F86F00B7BDD4 /* ForecastListCollectionViewCell.swift */; };
+		D5999EF52170FC9300B7BDD4 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5999EF42170FC9300B7BDD4 /* UIImageView.swift */; };
 		FBCC3D29DE933C56F57A24BD /* Pods_MobiWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C03D5C45E1EE71AA4440EDA /* Pods_MobiWeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,8 @@
 		D53FBBDF216E4532007CEC3F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D53FBBE1216E6152007CEC3F /* MobiBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiBoard.swift; sourceTree = "<group>"; };
 		D53FBBE3216E61B1007CEC3F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D5999EF22170F86F00B7BDD4 /* ForecastListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5999EF42170FC9300B7BDD4 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		D7991C3C7888D01D141A518F /* Pods_MobiWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8CB1F2D9B557A25557882E /* Pods-MobiWeather.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeather.stage.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeather/Pods-MobiWeather.stage.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +166,7 @@
 				7F976E45216F2C3F003D2F6E /* CLLocationCoordinate2D.swift */,
 				7F976E4A216F4D4F003D2F6E /* Double.swift */,
 				7F976E53216F73E1003D2F6E /* Dictionary.swift */,
+				D5999EF42170FC9300B7BDD4 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 		7F976E4C216F66D3003D2F6E /* CityDetail */ = {
 			isa = PBXGroup;
 			children = (
+				D5999EF12170F84F00B7BDD4 /* Cells */,
 				7F976E4D216F66F6003D2F6E /* CityDetailViewController.swift */,
 			);
 			path = CityDetail;
@@ -348,6 +354,14 @@
 				7F976E26216DD5E0003D2F6E /* Managers */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D5999EF12170F84F00B7BDD4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D5999EF22170F86F00B7BDD4 /* ForecastListCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D8871F1C80D1F1A602A6B4A5 /* Frameworks */ = {
@@ -488,6 +502,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobiWeather/Pods-MobiWeather-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -499,6 +514,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -537,10 +553,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F976E3D216E0AE1003D2F6E /* MobiBaseViewController.swift in Sources */,
+				D5999EF52170FC9300B7BDD4 /* UIImageView.swift in Sources */,
 				7F976E52216F6FE6003D2F6E /* LocalLocation.swift in Sources */,
 				7F976E44216F1040003D2F6E /* Annotation.swift in Sources */,
 				7F976E42216EFF4D003D2F6E /* LocationPickerViewController.swift in Sources */,
 				7F976E34216E0246003D2F6E /* Weather.swift in Sources */,
+				D5999EF32170F86F00B7BDD4 /* ForecastListCollectionViewCell.swift in Sources */,
 				7F976E2F216DD7F6003D2F6E /* String.swift in Sources */,
 				7F5E0E0721709992008DFFDE /* City.swift in Sources */,
 				7F976E29216DD60F003D2F6E /* MobiAPIProvider.swift in Sources */,

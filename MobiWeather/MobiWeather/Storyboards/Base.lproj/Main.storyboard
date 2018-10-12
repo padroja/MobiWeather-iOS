@@ -297,10 +297,10 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="724"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuu-yP-e5K" userLabel="Container">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="385.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="505.66666666666669"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lj-wH-kp6" userLabel="View-Data">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="385.66666666666669"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="505.66666666666669"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dB-to-gev" userLabel="View-Top">
                                                                 <rect key="frame" x="16" y="10" width="343" height="200"/>
@@ -492,15 +492,105 @@
                                                                     <constraint firstItem="1QK-3m-qi5" firstAttribute="leading" secondItem="SHV-VR-MCZ" secondAttribute="leading" constant="10" id="kC0-WG-1JY"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fER-eW-plS" userLabel="View-Forecast">
+                                                                <rect key="frame" x="0.0" y="385.66666666666669" width="375" height="120"/>
+                                                                <subviews>
+                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oQq-kd-jvF">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iZF-wZ-9S3">
+                                                                            <size key="itemSize" width="100" height="120"/>
+                                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                        </collectionViewFlowLayout>
+                                                                        <cells>
+                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ForecastListCollectionViewCell" id="3Zu-En-2Ow" customClass="ForecastListCollectionViewCell" customModule="MobiWeather" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                                    <subviews>
+                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39m-SP-aBy" userLabel="View-Content">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                                                                            <subviews>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="268-Rv-2bO">
+                                                                                                    <rect key="frame" x="10" y="10" width="80" height="100"/>
+                                                                                                    <subviews>
+                                                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="df3-Uj-tV7">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                                                                            <constraints>
+                                                                                                                <constraint firstAttribute="height" constant="50" id="qGB-pJ-PYL"/>
+                                                                                                            </constraints>
+                                                                                                        </imageView>
+                                                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-ME-48I">
+                                                                                                            <rect key="frame" x="0.0" y="60" width="80" height="40"/>
+                                                                                                            <subviews>
+                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueP-Jv-xXV">
+                                                                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="17.666666666666668"/>
+                                                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                    <nil key="highlightedColor"/>
+                                                                                                                </label>
+                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="6:40 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQc-SV-yl9">
+                                                                                                                    <rect key="frame" x="0.0" y="22.666666666666671" width="80" height="17.333333333333329"/>
+                                                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                    <nil key="highlightedColor"/>
+                                                                                                                </label>
+                                                                                                            </subviews>
+                                                                                                        </stackView>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                            </subviews>
+                                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="bottom" secondItem="268-Rv-2bO" secondAttribute="bottom" constant="10" id="0he-WA-Nvb"/>
+                                                                                                <constraint firstItem="268-Rv-2bO" firstAttribute="leading" secondItem="39m-SP-aBy" secondAttribute="leading" constant="10" id="V7z-Cb-Xtt"/>
+                                                                                                <constraint firstItem="268-Rv-2bO" firstAttribute="top" secondItem="39m-SP-aBy" secondAttribute="top" constant="10" id="kxb-eQ-ucM"/>
+                                                                                                <constraint firstAttribute="trailing" secondItem="268-Rv-2bO" secondAttribute="trailing" constant="10" id="zDA-ST-t8F"/>
+                                                                                            </constraints>
+                                                                                        </view>
+                                                                                    </subviews>
+                                                                                </view>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="bottom" secondItem="39m-SP-aBy" secondAttribute="bottom" id="HlK-pE-OP2"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="39m-SP-aBy" secondAttribute="trailing" id="RVN-AC-WGS"/>
+                                                                                    <constraint firstItem="39m-SP-aBy" firstAttribute="leading" secondItem="3Zu-En-2Ow" secondAttribute="leading" id="YUQ-EZ-QSl"/>
+                                                                                    <constraint firstItem="39m-SP-aBy" firstAttribute="top" secondItem="3Zu-En-2Ow" secondAttribute="top" id="tAI-2r-yBN"/>
+                                                                                </constraints>
+                                                                                <size key="customSize" width="100" height="120"/>
+                                                                                <connections>
+                                                                                    <outlet property="forecastImageView" destination="df3-Uj-tV7" id="WWZ-pi-bBT"/>
+                                                                                    <outlet property="forecastTempLabel" destination="ueP-Jv-xXV" id="EFw-Js-CRD"/>
+                                                                                    <outlet property="timeLabel" destination="YQc-SV-yl9" id="9xa-Rr-juj"/>
+                                                                                </connections>
+                                                                            </collectionViewCell>
+                                                                        </cells>
+                                                                    </collectionView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="oQq-kd-jvF" secondAttribute="trailing" id="0ob-dK-KOo"/>
+                                                                    <constraint firstAttribute="height" constant="120" id="6cB-Ch-LUe"/>
+                                                                    <constraint firstItem="oQq-kd-jvF" firstAttribute="leading" secondItem="fER-eW-plS" secondAttribute="leading" id="aoi-4M-7fE"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="oQq-kd-jvF" secondAttribute="bottom" id="gEt-ZZ-vLU"/>
+                                                                    <constraint firstItem="oQq-kd-jvF" firstAttribute="top" secondItem="fER-eW-plS" secondAttribute="top" id="hGu-GZ-gBx"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="SHV-VR-MCZ" secondAttribute="bottom" id="2Kx-gf-eTV"/>
                                                             <constraint firstItem="SHV-VR-MCZ" firstAttribute="top" secondItem="6dB-to-gev" secondAttribute="bottom" id="BUr-cg-VJO"/>
+                                                            <constraint firstItem="fER-eW-plS" firstAttribute="top" secondItem="SHV-VR-MCZ" secondAttribute="bottom" id="CQG-cG-9bo"/>
                                                             <constraint firstAttribute="trailing" secondItem="SHV-VR-MCZ" secondAttribute="trailing" id="LP9-Fk-jn6"/>
                                                             <constraint firstAttribute="trailing" secondItem="6dB-to-gev" secondAttribute="trailing" constant="16" id="LRJ-Px-Yma"/>
+                                                            <constraint firstAttribute="bottom" secondItem="fER-eW-plS" secondAttribute="bottom" id="O7o-X4-MAN"/>
                                                             <constraint firstItem="6dB-to-gev" firstAttribute="top" secondItem="6lj-wH-kp6" secondAttribute="top" constant="10" id="Vba-wW-JyT"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fER-eW-plS" secondAttribute="trailing" id="dQo-ME-HUD"/>
                                                             <constraint firstItem="6dB-to-gev" firstAttribute="leading" secondItem="6lj-wH-kp6" secondAttribute="leading" constant="16" id="gii-FM-aCR"/>
+                                                            <constraint firstItem="fER-eW-plS" firstAttribute="leading" secondItem="6lj-wH-kp6" secondAttribute="leading" id="pFs-QD-5H2"/>
                                                             <constraint firstItem="SHV-VR-MCZ" firstAttribute="leading" secondItem="6lj-wH-kp6" secondAttribute="leading" id="qMD-rG-oWL"/>
                                                         </constraints>
                                                     </view>
@@ -549,6 +639,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="closeButton" destination="CMl-AQ-OeD" id="swF-Y6-jaC"/>
+                        <outlet property="forecastCollectionView" destination="oQq-kd-jvF" id="fNt-Du-mV4"/>
                         <outlet property="humidityLabel" destination="C7e-a0-EVM" id="P1q-aB-UEc"/>
                         <outlet property="minMaxTempLabel" destination="oL4-EU-lkX" id="RgA-pI-CKA"/>
                         <outlet property="navTitleLabel" destination="Jcg-ZW-nqu" id="lLP-rv-vsm"/>

@@ -8,6 +8,7 @@ target 'MobiWeather' do
     pod 'SVProgressHUD'
     pod 'Hero'
     pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
+    pod 'Kingfisher', '~> 4.10'
 
   target 'MobiWeatherTests' do
     inherit! :search_paths
