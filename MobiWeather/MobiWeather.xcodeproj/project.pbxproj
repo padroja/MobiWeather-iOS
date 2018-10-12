@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2CBD42E2804CC45640DD5EED /* Pods_MobiWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7991C3C7888D01D141A518F /* Pods_MobiWeather.framework */; };
+		7F5E0E0321704E45008DFFDE /* WeatherTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E0E0221704E45008DFFDE /* WeatherTypes.swift */; };
+		7F5E0E0521707BF5008DFFDE /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E0E0421707BF5008DFFDE /* WeatherForecast.swift */; };
+		7F5E0E0721709992008DFFDE /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E0E0621709992008DFFDE /* City.swift */; };
+		7F5E0E0A2170C088008DFFDE /* WeatherStubbed.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0E092170C088008DFFDE /* WeatherStubbed.json */; };
 		7F976E29216DD60F003D2F6E /* MobiAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E28216DD60F003D2F6E /* MobiAPIProvider.swift */; };
 		7F976E2C216DD787003D2F6E /* MobiConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E2B216DD787003D2F6E /* MobiConsts.swift */; };
 		7F976E2F216DD7F6003D2F6E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E2E216DD7F6003D2F6E /* String.swift */; };
@@ -51,6 +55,10 @@
 /* Begin PBXFileReference section */
 		1C03D5C45E1EE71AA4440EDA /* Pods_MobiWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		508EE9555045D76FEE3353A4 /* Pods-MobiWeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeatherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeatherTests/Pods-MobiWeatherTests.release.xcconfig"; sourceTree = "<group>"; };
+		7F5E0E0221704E45008DFFDE /* WeatherTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTypes.swift; sourceTree = "<group>"; };
+		7F5E0E0421707BF5008DFFDE /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
+		7F5E0E0621709992008DFFDE /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		7F5E0E092170C088008DFFDE /* WeatherStubbed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WeatherStubbed.json; sourceTree = "<group>"; };
 		7F976E28216DD60F003D2F6E /* MobiAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiAPIProvider.swift; sourceTree = "<group>"; };
 		7F976E2B216DD787003D2F6E /* MobiConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiConsts.swift; sourceTree = "<group>"; };
 		7F976E2E216DD7F6003D2F6E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -110,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F5E0E082170C021008DFFDE /* StubbedResponses */ = {
+			isa = PBXGroup;
+			children = (
+				7F5E0E092170C088008DFFDE /* WeatherStubbed.json */,
+			);
+			path = StubbedResponses;
+			sourceTree = "<group>";
+		};
 		7F976E26216DD5E0003D2F6E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +138,7 @@
 		7F976E27216DD5EB003D2F6E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7F5E0E082170C021008DFFDE /* StubbedResponses */,
 				7F976E28216DD60F003D2F6E /* MobiAPIProvider.swift */,
 				7F976E30216DD8E7003D2F6E /* MobiNetworkService.swift */,
 			);
@@ -153,8 +170,11 @@
 			isa = PBXGroup;
 			children = (
 				7F976E33216E0246003D2F6E /* Weather.swift */,
+				7F5E0E0421707BF5008DFFDE /* WeatherForecast.swift */,
+				7F5E0E0221704E45008DFFDE /* WeatherTypes.swift */,
 				7F976E43216F1040003D2F6E /* Annotation.swift */,
 				7F976E51216F6FE6003D2F6E /* LocalLocation.swift */,
+				7F5E0E0621709992008DFFDE /* City.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -427,6 +447,7 @@
 				7FD12548216DC51B000C96B9 /* Assets.xcassets in Resources */,
 				7FD12546216DC51A000C96B9 /* Main.storyboard in Resources */,
 				7F976E3F216EFD67003D2F6E /* LocationPicker.storyboard in Resources */,
+				7F5E0E0A2170C088008DFFDE /* WeatherStubbed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +542,7 @@
 				7F976E42216EFF4D003D2F6E /* LocationPickerViewController.swift in Sources */,
 				7F976E34216E0246003D2F6E /* Weather.swift in Sources */,
 				7F976E2F216DD7F6003D2F6E /* String.swift in Sources */,
+				7F5E0E0721709992008DFFDE /* City.swift in Sources */,
 				7F976E29216DD60F003D2F6E /* MobiAPIProvider.swift in Sources */,
 				7FD1256B216DC8B8000C96B9 /* Configuration.swift in Sources */,
 				7F976E50216F6E5B003D2F6E /* LocalStorageManager.swift in Sources */,
@@ -528,7 +550,9 @@
 				7F976E2C216DD787003D2F6E /* MobiConsts.swift in Sources */,
 				7F976E49216F2E88003D2F6E /* HomeWeatherLocationTableViewCell.swift in Sources */,
 				D53FBBE4216E61B1007CEC3F /* UIViewController.swift in Sources */,
+				7F5E0E0321704E45008DFFDE /* WeatherTypes.swift in Sources */,
 				D53FBBE0216E4532007CEC3F /* HomeViewController.swift in Sources */,
+				7F5E0E0521707BF5008DFFDE /* WeatherForecast.swift in Sources */,
 				7FD1256D216DC8D7000C96B9 /* Environment.swift in Sources */,
 				7F976E54216F73E1003D2F6E /* Dictionary.swift in Sources */,
 				D53FBBE2216E6152007CEC3F /* MobiBoard.swift in Sources */,

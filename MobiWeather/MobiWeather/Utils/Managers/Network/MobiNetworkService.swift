@@ -38,4 +38,11 @@ final class MobiNetworkService {
             }
         }
     }
+    
+    class func getStubbedResponses(fileName: String) -> Data! {
+        @objc class TestClass: NSObject { }
+        let bundle = Bundle(for: TestClass.self)
+        let path = bundle.path(forResource: fileName, ofType: "json")
+        return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
+    }
 }

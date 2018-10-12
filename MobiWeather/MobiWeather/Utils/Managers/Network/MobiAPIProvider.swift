@@ -11,6 +11,7 @@ import Moya
 
 enum MobiAPIProvider {
     case getWeather(params: [String : Any])
+    case getForeCast(params: [String : Any])
 }
 
 extension MobiAPIProvider: TargetType {
@@ -22,22 +23,25 @@ extension MobiAPIProvider: TargetType {
     var path: String {
         switch self {
         case .getWeather: return "weather"
+        case .getForeCast: return "forecast"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getWeather: return .get
+        case .getWeather, .getForeCast: return .get
         }
     }
     
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .getWeather, .getForeCast: return MobiNetworkService.getStubbedResponses(fileName: "WeatherStubbed")
+        }
     }
     
     var task: Task {
         switch self {
-        case .getWeather(var params):
+        case .getWeather(var params), .getForeCast(var params):
             params["appid"] = MobiConsts.currentConfiguration.openWeatherApiKey
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
@@ -47,3 +51,4 @@ extension MobiAPIProvider: TargetType {
         return nil
     }    
 }
+

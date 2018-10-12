@@ -38,6 +38,7 @@ class Weather: Mappable {
         id <- map["id"]
         name <- map["name"]
         cod <- map["cod"]
+        sys <- map["sys"]
     }
 }
 
@@ -58,7 +59,7 @@ class WeatherType: Mappable {
     
     var id: Int?
     var main: String?
-    var description: String?
+    var description: WeatherTypes?
     var icon: String?
     
     required init?(map: Map) {}
@@ -66,7 +67,7 @@ class WeatherType: Mappable {
     func mapping(map: Map) {
         id <- map["id"]
         main <- map["main"]
-        description <- map["description"]
+        description <- (map["description"], EnumTransform<WeatherTypes>())
         icon <- map["icon"]
     }
 }
@@ -78,6 +79,9 @@ class WeatherMain: Mappable {
     var humidity: Double?
     var tempMax: Double?
     var tempMin: Double?
+    var seaLevel: Double?
+    var groundLevel: Double?
+    var tempKF: Double?
     
     required init?(map: Map) {}
     
@@ -87,6 +91,9 @@ class WeatherMain: Mappable {
         humidity <- map["humidity"]
         tempMax <- map["temp_min"]
         tempMin <- map["temp_max"]
+        seaLevel <- map["sea_level"]
+        groundLevel <- map["grnd_level"]
+        tempKF <- map["temp_kf"]
     }
 }
 
@@ -120,11 +127,19 @@ class WeatherSys: Mappable {
     var id: Double?
     var message: Double?
     var country: String?
-    var sunrise: String?
+    var sunrise: Double?
     var sunset: Double?
+    var pod: String?
     
     required init?(map: Map) {}
     
     func mapping(map: Map) {
+        type <- map["type"]
+        id <- map["id"]
+        message <- map["message"]
+        country <- map["country"]
+        sunrise <- map["sunrise"]
+        sunset <- map["sunset"]
+        pod <- map["pod"]
     }
 }

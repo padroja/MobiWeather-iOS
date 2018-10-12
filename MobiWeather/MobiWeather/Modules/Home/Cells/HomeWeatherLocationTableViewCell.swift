@@ -12,7 +12,7 @@ class HomeWeatherLocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var weatherTypeLabel: UILabel!
-    @IBOutlet weak var weatherTypeImageView: UIImageView!
+    @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     
     var localLocation: LocalLocation!
@@ -28,22 +28,22 @@ class HomeWeatherLocationTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(location: LocalLocation, index: Int) {
+    func configureCell(location: LocalLocation) {
         if localLocation != nil {
             if localLocation.location != location.location {
                 forceRefreshCell = true
             }
         }
         localLocation = location
-        setupTransistionData(index: index)
         setInitialData()
         updateCellUI()
     }
     
-    private func setupTransistionData(index: Int) {
+    func setupTransistionData(index: Int) {
         cityNameLabel.hero.id = "h_city_\(index)"
         weatherTypeLabel.hero.id = "h_weatherType_\(index)"
         temperatureLabel.hero.id = "h_temperature_\(index)"
+        weatherImageView.hero.id = "h_weatherImage_\(index)"
     }
     
     private func setInitialData() {
@@ -61,8 +61,9 @@ class HomeWeatherLocationTableViewCell: UITableViewCell {
         }
         
         if let weatherDetails = weatherModel {
-            cityNameLabel.text = weatherDetails.name
-            weatherTypeLabel.text = weatherDetails.weatherTypes?.first?.main
+//            cityNameLabel.text = weatherDetails.name
+            weatherTypeLabel.text = weatherDetails.weatherTypes?.first?.description?.rawValue.capitalized
+            weatherImageView.image = weatherDetails.weatherTypes?.first?.description?.icon ?? UIImage(named: "img_cloud_day")
             temperatureLabel.text = weatherDetails.main?.temp?.getTemperatureString()
         } else {
             if !isRequestingWeather {

@@ -11,6 +11,7 @@ import SwiftyUserDefaults
 
 extension DefaultsKeys {
     static let storedLocations = DefaultsKey<[LocalLocation]>("storedLocations", defaultValue: [])
+    static let temperatureUnit = DefaultsKey<String>("temperatureUnit", defaultValue: "c")
 }
 
 class LocalStorageManager {

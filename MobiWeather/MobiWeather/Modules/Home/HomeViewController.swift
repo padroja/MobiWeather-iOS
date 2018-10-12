@@ -21,6 +21,7 @@ class HomeViewController: MobiBaseViewController {
     }
     
     var locationPlaces: [LocalLocation]?
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,17 @@ class HomeViewController: MobiBaseViewController {
     }
     
     private func configureView() {
+        refreshControl.addTarget(self, action: #selector(refreshLocations), for: .valueChanged)
+        locationTableView.refreshControl = refreshControl
         locationTableView.allowsMultipleSelectionDuringEditing = false
         updateLocationTable()
+    }
+    
+    @objc private func refreshLocations() {
+        locationPlaces?.removeAll()
+        locationTableView.reloadData()
+        updateLocationTable()
+        refreshControl.endRefreshing()
     }
     
     private func updateLocationTable() {
@@ -39,9 +49,10 @@ class HomeViewController: MobiBaseViewController {
         locationTableView.reloadData()
     }
     
-    private func navigateToCityDetail(details: Weather, selectedIndex: Int) {
+    private func navigateToCityDetail(details: Weather, localLocation: LocalLocation, selectedIndex: Int) {
         let cityDetailController = CityDetailViewController.instantiateFrom(appStoryboard: .Main)
         cityDetailController.weatherDetails = details
+        cityDetailController.localLocation = localLocation
         cityDetailController.selectedIndex = selectedIndex
         push(cityDetailController)
     }
@@ -62,7 +73,7 @@ extension HomeViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let location = locationPlaces![indexPath.row]
-        cell.configureCell(location: location, index: indexPath.row)
+        cell.configureCell(location: location)
         
         return cell
     }
@@ -76,7 +87,8 @@ extension HomeViewController: UITableViewDelegate {
         }
         
         if let weatherDetails = cell.weatherModel {
-            navigateToCityDetail(details: weatherDetails, selectedIndex: indexPath.row)
+            cell.setupTransistionData(index: indexPath.row)
+            navigateToCityDetail(details: weatherDetails, localLocation: cell.localLocation, selectedIndex: indexPath.row)
         }
     }
     
@@ -88,7 +100,7 @@ extension HomeViewController: UITableViewDelegate {
         if editingStyle == .delete {
             LocalStorageManager.remove(location: locationPlaces![indexPath.row])
             locationPlaces?.remove(at: indexPath.row)
-            updateLocationTable()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
 }
