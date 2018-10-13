@@ -18,13 +18,6 @@ class MobiWeatherTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    func testTemperatureConversion() {
-        let expectedValue = "30.0°"
-        let tempKelvin = 303.15
-        let actualValue = tempKelvin.getTemperatureString()
-        XCTAssertTrue(expectedValue == actualValue)
-    }
 
     func testExample() {
         // This is an example of a functional test case.

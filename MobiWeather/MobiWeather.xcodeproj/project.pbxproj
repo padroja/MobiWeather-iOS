@@ -39,6 +39,10 @@
 		D53FBBE0216E4532007CEC3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBDF216E4532007CEC3F /* HomeViewController.swift */; };
 		D53FBBE2216E6152007CEC3F /* MobiBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBE1216E6152007CEC3F /* MobiBoard.swift */; };
 		D53FBBE4216E61B1007CEC3F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBE3216E61B1007CEC3F /* UIViewController.swift */; };
+		D562C1412171BAC100A7A557 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562C1402171BAC100A7A557 /* StringExtensionTests.swift */; };
+		D562C1432171BC2400A7A557 /* CLLocationExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562C1422171BC2400A7A557 /* CLLocationExtensionTests.swift */; };
+		D562C1462171BCE100A7A557 /* DoubleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562C1452171BCE100A7A557 /* DoubleTests.swift */; };
+		D562C1492171C0BE00A7A557 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562C1482171C0BE00A7A557 /* DictionaryTests.swift */; };
 		D5999EF32170F86F00B7BDD4 /* ForecastListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5999EF22170F86F00B7BDD4 /* ForecastListCollectionViewCell.swift */; };
 		D5999EF52170FC9300B7BDD4 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5999EF42170FC9300B7BDD4 /* UIImageView.swift */; };
 		FBCC3D29DE933C56F57A24BD /* Pods_MobiWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C03D5C45E1EE71AA4440EDA /* Pods_MobiWeatherTests.framework */; };
@@ -96,6 +100,10 @@
 		D53FBBDF216E4532007CEC3F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D53FBBE1216E6152007CEC3F /* MobiBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiBoard.swift; sourceTree = "<group>"; };
 		D53FBBE3216E61B1007CEC3F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D562C1402171BAC100A7A557 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		D562C1422171BC2400A7A557 /* CLLocationExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtensionTests.swift; sourceTree = "<group>"; };
+		D562C1452171BCE100A7A557 /* DoubleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTests.swift; sourceTree = "<group>"; };
+		D562C1482171C0BE00A7A557 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		D5999EF22170F86F00B7BDD4 /* ForecastListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5999EF42170FC9300B7BDD4 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		D7991C3C7888D01D141A518F /* Pods_MobiWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				7FD12555216DC51B000C96B9 /* MobiWeatherTests.swift */,
+				D562C1442171BCCE00A7A557 /* ExtensionsTests */,
+				D562C1472171C08E00A7A557 /* NetworkStubbing */,
 				7FD12557216DC51B000C96B9 /* Info.plist */,
 			);
 			path = MobiWeatherTests;
@@ -354,6 +364,24 @@
 				7F976E26216DD5E0003D2F6E /* Managers */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D562C1442171BCCE00A7A557 /* ExtensionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D562C1402171BAC100A7A557 /* StringExtensionTests.swift */,
+				D562C1422171BC2400A7A557 /* CLLocationExtensionTests.swift */,
+				D562C1452171BCE100A7A557 /* DoubleTests.swift */,
+				D562C1482171C0BE00A7A557 /* DictionaryTests.swift */,
+			);
+			path = ExtensionsTests;
+			sourceTree = "<group>";
+		};
+		D562C1472171C08E00A7A557 /* NetworkStubbing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkStubbing;
 			sourceTree = "<group>";
 		};
 		D5999EF12170F84F00B7BDD4 /* Cells */ = {
@@ -586,6 +614,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D562C1492171C0BE00A7A557 /* DictionaryTests.swift in Sources */,
+				D562C1412171BAC100A7A557 /* StringExtensionTests.swift in Sources */,
+				D562C1432171BC2400A7A557 /* CLLocationExtensionTests.swift in Sources */,
+				D562C1462171BCE100A7A557 /* DoubleTests.swift in Sources */,
 				7FD12556216DC51B000C96B9 /* MobiWeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
