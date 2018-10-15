@@ -19,6 +19,8 @@ final class MobiNetworkService {
     
     var weatherApiProvider = MoyaProvider<MobiAPIProvider>(plugins: [NetworkLoggerPlugin(verbose: MobiConsts.currentConfiguration == .dev ? true : false)])
     
+    var testApiProvider = MoyaProvider<MobiAPIProvider>(endpointClosure: MobiNetworkService.customEndpointClosure, stubClosure: MoyaProvider.immediatelyStub)
+    
     func requestObject<T: Mappable, TT:TargetType, P: MoyaProvider<TT>>(provider:P,
                                                                      type:TT,
                                                                      success: @escaping ((T) -> Void),
@@ -37,6 +39,14 @@ final class MobiNetworkService {
                 print("Handle Error = \(error)")
             }
         }
+    }
+    
+    static func customEndpointClosure(_ target: MobiAPIProvider) -> Endpoint {
+        return Endpoint(url: URL(target: target).absoluteString,
+                        sampleResponseClosure: { .networkResponse(200, target.sampleData) },
+                        method: target.method,
+                        task: target.task,
+                        httpHeaderFields: target.headers)
     }
     
     class func getStubbedResponses(fileName: String) -> Data! {

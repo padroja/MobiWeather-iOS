@@ -12,6 +12,7 @@
 		7F5E0E0521707BF5008DFFDE /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E0E0421707BF5008DFFDE /* WeatherForecast.swift */; };
 		7F5E0E0721709992008DFFDE /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E0E0621709992008DFFDE /* City.swift */; };
 		7F5E0E0A2170C088008DFFDE /* WeatherStubbed.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0E092170C088008DFFDE /* WeatherStubbed.json */; };
+		7F8BF01821745F8F006EB88E /* MobiAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BF01721745F8F006EB88E /* MobiAPITests.swift */; };
 		7F976E29216DD60F003D2F6E /* MobiAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E28216DD60F003D2F6E /* MobiAPIProvider.swift */; };
 		7F976E2C216DD787003D2F6E /* MobiConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E2B216DD787003D2F6E /* MobiConsts.swift */; };
 		7F976E2F216DD7F6003D2F6E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F976E2E216DD7F6003D2F6E /* String.swift */; };
@@ -65,6 +66,7 @@
 		7F5E0E0421707BF5008DFFDE /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		7F5E0E0621709992008DFFDE /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		7F5E0E092170C088008DFFDE /* WeatherStubbed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WeatherStubbed.json; sourceTree = "<group>"; };
+		7F8BF01721745F8F006EB88E /* MobiAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiAPITests.swift; sourceTree = "<group>"; };
 		7F976E28216DD60F003D2F6E /* MobiAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiAPIProvider.swift; sourceTree = "<group>"; };
 		7F976E2B216DD787003D2F6E /* MobiConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiConsts.swift; sourceTree = "<group>"; };
 		7F976E2E216DD7F6003D2F6E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 				7F5E0E092170C088008DFFDE /* WeatherStubbed.json */,
 			);
 			path = StubbedResponses;
+			sourceTree = "<group>";
+		};
+		7F8BF01621745F71006EB88E /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F8BF01721745F8F006EB88E /* MobiAPITests.swift */,
+			);
+			path = NetworkTests;
 			sourceTree = "<group>";
 		};
 		7F976E26216DD5E0003D2F6E /* Managers */ = {
@@ -292,8 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				7FD12555216DC51B000C96B9 /* MobiWeatherTests.swift */,
+				7F8BF01621745F71006EB88E /* NetworkTests */,
 				D562C1442171BCCE00A7A557 /* ExtensionsTests */,
-				D562C1472171C08E00A7A557 /* NetworkStubbing */,
 				7FD12557216DC51B000C96B9 /* Info.plist */,
 			);
 			path = MobiWeatherTests;
@@ -375,13 +385,6 @@
 				D562C1482171C0BE00A7A557 /* DictionaryTests.swift */,
 			);
 			path = ExtensionsTests;
-			sourceTree = "<group>";
-		};
-		D562C1472171C08E00A7A557 /* NetworkStubbing */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkStubbing;
 			sourceTree = "<group>";
 		};
 		D5999EF12170F84F00B7BDD4 /* Cells */ = {
@@ -615,6 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D562C1492171C0BE00A7A557 /* DictionaryTests.swift in Sources */,
+				7F8BF01821745F8F006EB88E /* MobiAPITests.swift in Sources */,
 				D562C1412171BAC100A7A557 /* StringExtensionTests.swift in Sources */,
 				D562C1432171BC2400A7A557 /* CLLocationExtensionTests.swift in Sources */,
 				D562C1462171BCE100A7A557 /* DoubleTests.swift in Sources */,
