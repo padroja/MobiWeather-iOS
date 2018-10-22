@@ -12,7 +12,7 @@ import Kingfisher
 
 extension UIImageView {
     
-    func setImage(with urlString : String?, indicator: Bool = true) {
+    func setImage(with urlString: String?, indicator: Bool = true) {
         if indicator {
             self.kf.indicatorType = .activity
         }

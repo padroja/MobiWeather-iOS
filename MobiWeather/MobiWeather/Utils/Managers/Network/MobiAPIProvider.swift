@@ -10,8 +10,8 @@ import Foundation
 import Moya
 
 enum MobiAPIProvider {
-    case getWeather(params: [String : Any])
-    case getForeCast(params: [String : Any])
+    case getWeather(params: [String: Any])
+    case getForeCast(params: [String: Any])
 }
 
 extension MobiAPIProvider: TargetType {
@@ -47,7 +47,7 @@ extension MobiAPIProvider: TargetType {
         }
     }
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }    
 }

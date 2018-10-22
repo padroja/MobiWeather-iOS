@@ -21,15 +21,15 @@ final class MobiNetworkService {
     
     var testApiProvider = MoyaProvider<MobiAPIProvider>(endpointClosure: MobiNetworkService.customEndpointClosure, stubClosure: MoyaProvider.immediatelyStub)
     
-    func requestObject<T: Mappable, TT:TargetType, P: MoyaProvider<TT>>(provider:P,
-                                                                     type:TT,
-                                                                     success: @escaping ((T) -> Void),
-                                                                     failure: @escaping ((Error) -> Void)) {
+    func requestObject<T: Mappable, TT: TargetType, P: MoyaProvider<TT>>(provider: P,
+                                                                         type: TT,
+                                                                         success: @escaping ((T) -> Void),
+                                                                         failure: @escaping ((Error) -> Void)) {
         provider.request(type) { (result) in
             switch result {
             case let .success(response):
                 do {
-                    let _ = try response.filterSuccessfulStatusCodes()
+                    _ = try response.filterSuccessfulStatusCodes()
                     let modelObj = try response.mapObject(T.self)
                     success(modelObj)
                 } catch {
@@ -50,7 +50,7 @@ final class MobiNetworkService {
     }
     
     class func getStubbedResponses(fileName: String) -> Data! {
-        @objc class TestClass: NSObject { }
+        @objc class TestClass: NSObject {}
         let bundle = Bundle(for: TestClass.self)
         let path = bundle.path(forResource: fileName, ofType: "json")
         return (try? Data(contentsOf: URL(fileURLWithPath: path!)))

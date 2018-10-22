@@ -75,8 +75,8 @@ class HomeWeatherLocationTableViewCell: UITableViewCell {
     private func getWeatherDetails() {
         isRequestingWeather = true
         let coordinates = localLocation.location
-        let params = ["lat" : coordinates.getCoordinates.lat,
-                      "lon" : coordinates.getCoordinates.lon]
+        let params = ["lat": coordinates.getCoordinates.lat,
+                      "lon": coordinates.getCoordinates.lon]
         MobiNetworkService.shared.requestObject(provider: MobiNetworkService.shared.weatherApiProvider,
                                                 type: MobiAPIProvider.getWeather(params: params),
                                                 success: { (model: Weather) in

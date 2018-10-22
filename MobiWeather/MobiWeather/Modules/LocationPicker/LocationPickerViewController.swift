@@ -83,8 +83,8 @@ class LocationPickerViewController: MobiBaseViewController {
         }
         annotation.title = annotationTitle
         mapView.addAnnotation(annotation)
-        let placesDict = ["cityName" : annotationTitle,
-                          "location" : coordinate.getLocationString()]
+        let placesDict = ["cityName": annotationTitle,
+                          "location": coordinate.getLocationString()]
         LocalStorageManager.add(location: placesDict.getLocalLocationModel())
     }
 }

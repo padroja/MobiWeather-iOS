@@ -15,7 +15,7 @@ class HomeViewController: MobiBaseViewController {
     @IBOutlet weak var locationTableView: UITableView!
     
     @IBAction func addLocationAction(_ sender: UIButton) {
-        let locationPickerController = LocationPickerViewController.instantiateFrom(appStoryboard: .LocationPicker)
+        let locationPickerController = LocationPickerViewController.instantiateFrom(appStoryboard: .locationPicker)
         locationPickerController.delegate = self
         present(locationPickerController)
     }
@@ -50,7 +50,7 @@ class HomeViewController: MobiBaseViewController {
     }
     
     private func navigateToCityDetail(details: Weather, localLocation: LocalLocation, selectedIndex: Int) {
-        let cityDetailController = CityDetailViewController.instantiateFrom(appStoryboard: .Main)
+        let cityDetailController = CityDetailViewController.instantiateFrom(appStoryboard: .main)
         cityDetailController.weatherDetails = details
         cityDetailController.localLocation = localLocation
         cityDetailController.selectedIndex = selectedIndex

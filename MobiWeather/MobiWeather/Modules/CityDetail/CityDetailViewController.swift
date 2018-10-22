@@ -86,8 +86,8 @@ extension CityDetailViewController {
     private func getForecastDetails() {
         guard let lat = weatherDetails.coord?.lat, let lon = weatherDetails.coord?.lon else { return }
         
-        let params: [String : Any] = ["lat" : lat,
-                                      "lon" : lon]
+        let params: [String : Any] = ["lat": lat,
+                                      "lon": lon]
         MobiNetworkService.shared.requestObject(provider: MobiNetworkService.shared.weatherApiProvider,
                                                 type: MobiAPIProvider.getForeCast(params: params),
                                                 success: { (model: WeatherForecast) in

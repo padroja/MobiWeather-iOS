@@ -11,7 +11,8 @@ import UIKit
 
 enum MobiBoard: String {
     
-    case Main, LocationPicker
+    case main = "Main"
+    case locationPicker = "LocationPicker"
     
     var instance: UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)

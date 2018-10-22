@@ -39,7 +39,7 @@ class LaunchViewController: MobiBaseViewController {
     }
     
     private func navigateToHomeController() {
-        let controller = HomeViewController.instantiateFrom(appStoryboard: .Main)
+        let controller = HomeViewController.instantiateFrom(appStoryboard: .main)
         push(controller)
     }
     

@@ -20,8 +20,8 @@ class DictionaryTests: XCTestCase {
     }
     
     func testLocalLocationDict() {
-        let locationDict = ["cityName" : "Pune",
-                            "location" : "35.98,74.05"]
+        let locationDict = ["cityName": "Pune",
+                            "location": "35.98,74.05"]
         let convertedModel = locationDict.getLocalLocationModel()
         let actualCity = convertedModel.cityName == "Pune"
         let actualLocation = convertedModel.location == "35.98,74.05"
