@@ -5,10 +5,10 @@ target 'MobiWeather' do
   use_frameworks!
     pod 'Moya'
     pod 'Moya-ObjectMapper'
-    pod 'SVProgressHUD'
     pod 'Hero'
     pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
     pod 'Kingfisher', '~> 4.10'
+    pod 'lottie-ios'
 
   target 'MobiWeatherTests' do
     inherit! :search_paths

@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.7.3)
   - Hero (1.3.1)
   - Kingfisher (4.10.0)
+  - lottie-ios (2.5.0)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya-ObjectMapper (2.7):
@@ -20,6 +21,7 @@ PODS:
 DEPENDENCIES:
   - Hero
   - Kingfisher (~> 4.10)
+  - lottie-ios
   - Moya
   - Moya-ObjectMapper
   - SVProgressHUD
@@ -30,6 +32,7 @@ SPEC REPOS:
     - Alamofire
     - Hero
     - Kingfisher
+    - lottie-ios
     - Moya
     - Moya-ObjectMapper
     - ObjectMapper
@@ -41,6 +44,7 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Hero: 1c3c625ba05856f305d29f5c270f8766c5ff2df7
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Moya-ObjectMapper: 441caa307b527331fde59e2577adc632a16f1255
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
@@ -48,6 +52,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
 
-PODFILE CHECKSUM: a9fcddb8ce6cbf18d77e85f9ad136d0061f968cc
+PODFILE CHECKSUM: 3ad91bf01d9753466bf57e05f510dbc674cabe6d
 
 COCOAPODS: 1.5.3

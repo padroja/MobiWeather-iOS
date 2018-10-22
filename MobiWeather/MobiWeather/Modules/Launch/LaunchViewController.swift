@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Lottie
 
 class LaunchViewController: MobiBaseViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var animatedView: UIView!
     
     private var currentAnimatedImageIndex = 0
     
@@ -26,22 +28,13 @@ class LaunchViewController: MobiBaseViewController {
     }
     
     private func startWeatherAnimation() {
-        var weatherImages = [#imageLiteral(resourceName: "img_sunny"),#imageLiteral(resourceName: "img_clear_night"),#imageLiteral(resourceName: "img_rain"),#imageLiteral(resourceName: "img_cloudy_night")]
-        let image = weatherImages[(currentAnimatedImageIndex % weatherImages.count)]
-        
-        UIView.transition(with: weatherImageView,
-                          duration: 0.7,
-                          options: [.transitionCrossDissolve,
-                                    .curveEaseOut],
-                          animations: {
-            self.weatherImageView.image = image
-        }) { (finish) in
-            self.currentAnimatedImageIndex += 1
-            if self.currentAnimatedImageIndex < weatherImages.count {
-                self.startWeatherAnimation()
-            } else {
-                self.navigateToHomeController()
-            }
+        let animator = LOTAnimationView(name: "sun_burst_weather_icon")
+        animator.frame = animatedView.bounds
+        animator.contentMode = .scaleAspectFill
+        animator.animationSpeed = 0.8
+        animatedView.addSubview(animator)
+        animator.play { (completed) in
+            self.navigateToHomeController()
         }
     }
     

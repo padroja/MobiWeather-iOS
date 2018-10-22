@@ -37,6 +37,7 @@
 		7FD12556216DC51B000C96B9 /* MobiWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD12555216DC51B000C96B9 /* MobiWeatherTests.swift */; };
 		7FD1256B216DC8B8000C96B9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1256A216DC8B8000C96B9 /* Configuration.swift */; };
 		7FD1256D216DC8D7000C96B9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1256C216DC8D7000C96B9 /* Environment.swift */; };
+		7FFAA08B217D972200338C4D /* sun_burst_weather_icon.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FFAA08A217D972200338C4D /* sun_burst_weather_icon.json */; };
 		D53FBBE0216E4532007CEC3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBDF216E4532007CEC3F /* HomeViewController.swift */; };
 		D53FBBE2216E6152007CEC3F /* MobiBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBE1216E6152007CEC3F /* MobiBoard.swift */; };
 		D53FBBE4216E61B1007CEC3F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FBBE3216E61B1007CEC3F /* UIViewController.swift */; };
@@ -95,6 +96,7 @@
 		7FD12557216DC51B000C96B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FD1256A216DC8B8000C96B9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		7FD1256C216DC8D7000C96B9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		7FFAA08A217D972200338C4D /* sun_burst_weather_icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sun_burst_weather_icon.json; sourceTree = "<group>"; };
 		801581CE5B412630028944CF /* Pods-MobiWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeather/Pods-MobiWeather.release.xcconfig"; sourceTree = "<group>"; };
 		8A5194FB666892032BEDB1A2 /* Pods-MobiWeatherTests.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeatherTests.stage.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeatherTests/Pods-MobiWeatherTests.stage.xcconfig"; sourceTree = "<group>"; };
 		A1B2F2D991C10FB118AB8C30 /* Pods-MobiWeatherTests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiWeatherTests.dev.xcconfig"; path = "Pods/Target Support Files/Pods-MobiWeatherTests/Pods-MobiWeatherTests.dev.xcconfig"; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 		7FD12561216DC708000C96B9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7FFAA089217D971800338C4D /* Animation */,
 				7FD12547216DC51B000C96B9 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -343,6 +346,14 @@
 				7FD1256C216DC8D7000C96B9 /* Environment.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		7FFAA089217D971800338C4D /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				7FFAA08A217D972200338C4D /* sun_burst_weather_icon.json */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		A3F58B52007AD5783C65A021 /* Pods */ = {
@@ -491,6 +502,7 @@
 				7FD1254B216DC51B000C96B9 /* LaunchScreen.storyboard in Resources */,
 				7FD12548216DC51B000C96B9 /* Assets.xcassets in Resources */,
 				7FD12546216DC51A000C96B9 /* Main.storyboard in Resources */,
+				7FFAA08B217D972200338C4D /* sun_burst_weather_icon.json in Resources */,
 				7F976E3F216EFD67003D2F6E /* LocationPicker.storyboard in Resources */,
 				7F5E0E0A2170C088008DFFDE /* WeatherStubbed.json in Resources */,
 			);
@@ -540,6 +552,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -552,6 +565,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
